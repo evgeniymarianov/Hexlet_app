@@ -20,7 +20,8 @@ from django.views.generic.base import TemplateView
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.IndexView.as_view(template_name = 'index.html')),
+    # path('admin/', admin.site.urls),
+    # path('', views.IndexView.as_view(template_name = 'index.html')),
+    path('', views.empty_path),
     path('calc/', include('hello_django.calc.urls')),
 ]
