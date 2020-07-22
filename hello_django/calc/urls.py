@@ -8,4 +8,5 @@ urlpatterns = [
     views.calc_view,
     name='calc',
     ),
+    path('history', views.history),
 ]

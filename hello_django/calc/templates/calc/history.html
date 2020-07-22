@@ -7,9 +7,16 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Страница вычислений</h1>
-{% block context %}
-  <h2>{{ a }} + {{ b }} = {{ sum }}</h2>
+  <h1>Страница истории</h1>
+{% block content %}
+<ul>
+  {% for obj in last_values %}
+  <li>
+    <p>Значение {{ obj.value }}</p>
+    <small>(Created at: {{ obj.timestamp }})</small>
+  </li>
+{% endfor %}
+</ul>
 {% endblock %}
 </body>
 </html>
